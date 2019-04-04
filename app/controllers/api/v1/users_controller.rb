@@ -6,10 +6,11 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    # byebug
+    byebug
     @user = User.create(user_params)
-    # @user.avatar.purge
+    # @user.avatar.attach(io: File.open("/path/to/face.jpg"), filename: "face.jpg", content_type: "image/jpg")
     # @user.avatar.attach(params[:avatar])
+    # @user.avatar.purge
     if @user.valid?
       @token = encode_token({ user_id: @user.id })
       render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
