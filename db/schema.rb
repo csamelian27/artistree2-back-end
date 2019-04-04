@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_04_03_143944) do
   create_table "media_items", force: :cascade do |t|
     t.string "title"
     t.string "description"
+    t.string "category"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
