@@ -10,7 +10,7 @@ class Api::V1::AuthController < ApplicationController
   end
 
   def create # POST /api/v1/login
-    byebug
+    # byebug
     @user = User.find_by(email: user_login_params[:email])
     # @user.authenticate('password')
     if @user && @user.authenticate(user_login_params[:password])
