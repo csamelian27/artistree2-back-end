@@ -1,4 +1,4 @@
 class MediaItem < ApplicationRecord
   belongs_to :user
-  has_many_attached :files
+  has_one_attached :file
 end
