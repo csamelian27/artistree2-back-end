@@ -8,8 +8,8 @@ class Api::V1::UsersController < ApplicationController
   def create
     byebug
     @user = User.create(user_params)
-    # @user.avatar.attach(io: File.open("/path/to/face.jpg"), filename: "face.jpg", content_type: "image/jpg")
-    # @user.avatar.attach(params[:avatar])
+    # @user.avatar.attach(io: File.open("C:\fakepath\dance_me.jpg.jpg"), filename: "dance_me.jpg", content_type: "image/jpg")
+    @user.avatar.attach(params[:avatar])
     # @user.avatar.purge
     if @user.valid?
       @token = encode_token({ user_id: @user.id })

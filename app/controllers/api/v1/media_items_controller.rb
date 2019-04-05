@@ -6,7 +6,7 @@ class Api::V1::MediaItemsController < ApplicationController
   end
 
   def create
-    # byebug
+    byebug
     @media_item = MediaItem.create(media_item_params)
     render json: @media_item
   end
@@ -14,7 +14,7 @@ class Api::V1::MediaItemsController < ApplicationController
   private
 
   def media_item_params
-    params.require(:media_item).permit(:title, :description, :category, :user_id)
+    params.require(:media_item).permit(:title, :description, :category, :user_id, :files)
   end
 
 end
