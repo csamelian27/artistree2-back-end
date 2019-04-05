@@ -1,4 +1,5 @@
 class Api::V1::MediaItemsController < ApplicationController
+  skip_before_action :authorized
 
   def index
     @media_items = MediaItem.all
