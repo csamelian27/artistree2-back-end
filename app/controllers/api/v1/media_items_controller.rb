@@ -13,7 +13,9 @@ class Api::V1::MediaItemsController < ApplicationController
 
   def create
     @media_item = MediaItem.create(media_item_params)
-    @media_item.file.attach(params[:file])
+    if !@media_item.file.blank?
+      @media_item.file.attach(media_item_params[:file])
+    end
     render json: @media_item
   end
 
