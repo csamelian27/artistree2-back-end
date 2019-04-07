@@ -6,4 +6,5 @@ class UserSerializer < ActiveModel::Serializer
   end
 
   has_many :media_items
+  has_many :resumes
 end
