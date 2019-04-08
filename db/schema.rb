@@ -63,8 +63,9 @@ ActiveRecord::Schema.define(version: 2019_04_08_001811) do
     t.integer "user_id"
     t.string "business_name"
     t.string "description"
-    t.integer "year_began"
-    t.integer "year_ended"
+    t.string "contact_person"
+    t.string "contact_number"
+    t.string "months_range"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
