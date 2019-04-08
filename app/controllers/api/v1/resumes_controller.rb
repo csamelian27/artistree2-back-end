@@ -11,6 +11,11 @@ class Api::V1::ResumesController < ApplicationController
       @resume.resume.attach(resume_params[:resume])
     end
     render json: @resume
+    # if @resume.valid?
+    #   render json: @resume
+    # else
+    #   render json: { error: @resume.errors.full_messages }, status: :not_acceptable
+    # end
   end
 
   private

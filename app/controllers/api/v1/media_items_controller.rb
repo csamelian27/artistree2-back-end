@@ -17,6 +17,11 @@ class Api::V1::MediaItemsController < ApplicationController
       @media_item.file.attach(media_item_params[:file])
     end
     render json: @media_item
+    # if @media_item.valid?
+    #   render json: @media_item
+    # else
+    #   render json: { error: @media_item.errors.full_messages }, status: :not_acceptable
+    # end
   end
 
   private
