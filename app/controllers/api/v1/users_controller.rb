@@ -24,13 +24,6 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
-  def update
-    # if !@user.resume.blank?
-    #   @user.resume.attach(user_params[:resume])
-    # end
-    # render json: url_for(@user.resume)
-  end
-
   private
 
   def find_user
