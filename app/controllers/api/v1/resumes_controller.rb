@@ -1,9 +1,8 @@
 class Api::V1::ResumesController < ApplicationController
 
   def show
-    byebug
-    @user = Resume.find(params[:user_id])
-    render url_for(@user.resume)
+    @resume = Resume.find(params[:id])
+    render json: @resume
   end
 
   def create
