@@ -8,6 +8,6 @@ class Api::V1::WorkExperiencesController < ApplicationController
   private
 
   def work_experiences_params
-    params.require(:work_experiences).permit(:user_id, :business_name, :description, :year_began, :year_ended)
+    params.require(:work_experiences).permit(:user_id, :business_name, :description, :months_range, :contact_person, :contact_number)
   end
 end
