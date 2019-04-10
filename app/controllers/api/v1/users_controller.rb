@@ -7,6 +7,11 @@ class Api::V1::UsersController < ApplicationController
     render json: { user: UserSerializer.new(current_user) }, status: :accepted
   end
 
+  def index
+    @users = User.all
+    render json: @users
+  end
+
   def show
     render json: @user
   end

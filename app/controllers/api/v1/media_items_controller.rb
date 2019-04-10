@@ -27,7 +27,7 @@ class Api::V1::MediaItemsController < ApplicationController
   private
 
   def media_item_params
-    params.require(:media_item).permit(:title, :description, :category, :user_id, :file)
+    params.require(:media_item).permit(:title, :description, :category, :user_id, :file, :file_type)
   end
 
 end

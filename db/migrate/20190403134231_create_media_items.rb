@@ -4,6 +4,7 @@ class CreateMediaItems < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :description
       t.string :category
+      t.string :file_type
       t.integer :user_id
 
       t.timestamps

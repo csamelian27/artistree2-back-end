@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_04_08_001811) do
     t.string "title"
     t.string "description"
     t.string "category"
+    t.string "file_type"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
