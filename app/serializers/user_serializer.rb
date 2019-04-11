@@ -7,5 +7,5 @@ class UserSerializer < ActiveModel::Serializer
 
   has_many :media_items
   has_many :work_experiences
-  has_one :resume
+  has_many :resumes
 end
