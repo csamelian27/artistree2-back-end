@@ -30,6 +30,12 @@ class Api::V1::MediaItemsController < ApplicationController
     render json: @media_item
   end
 
+  def destroy
+    @media_item = MediaItem.find(params[:id])
+    @media_item.destroy
+    render json: @media_item
+  end
+
   private
 
   def media_item_params
