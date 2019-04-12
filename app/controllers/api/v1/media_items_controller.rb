@@ -24,6 +24,12 @@ class Api::V1::MediaItemsController < ApplicationController
     # end
   end
 
+  def update
+    @media_item = MediaItem.find(params[:id])
+    @media_item.update(media_item_params)
+    render json: @media_item
+  end
+
   private
 
   def media_item_params
