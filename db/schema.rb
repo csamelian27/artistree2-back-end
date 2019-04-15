@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(version: 2019_04_15_160432) do
     t.string "full_name"
     t.string "email"
     t.string "password_digest"
+    t.string "artist_type"
+    t.text "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

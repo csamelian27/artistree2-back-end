@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :full_name, :email, :avatar
+  attributes :id, :full_name, :email, :avatar, :artist_type, :bio
 
   def avatar
     {avatar_url: self.object.avatar.blob.service_url}
