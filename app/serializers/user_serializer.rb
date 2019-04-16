@@ -12,4 +12,5 @@ class UserSerializer < ActiveModel::Serializer
   has_many :collaborating_users, foreign_key: :collaboratee_id, class_name: 'Collaboration'
   has_many :collaboratees, through: :collaborated_users
   has_many :collaborators, through: :collaborating_users
+  has_many :collab_posts
 end
