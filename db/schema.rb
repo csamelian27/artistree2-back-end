@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_04_16_192400) do
     t.string "title"
     t.string "description"
     t.string "seeking"
+    t.boolean "claimed?", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -48,6 +49,7 @@ ActiveRecord::Schema.define(version: 2019_04_16_192400) do
   create_table "collaborations", force: :cascade do |t|
     t.integer "collaborator_id"
     t.integer "collaboratee_id"
+    t.integer "collab_post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

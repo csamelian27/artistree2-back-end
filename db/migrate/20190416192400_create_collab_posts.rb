@@ -5,6 +5,7 @@ class CreateCollabPosts < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :description
       t.string :seeking
+      t.boolean :claimed, default: false
 
       t.timestamps
     end
