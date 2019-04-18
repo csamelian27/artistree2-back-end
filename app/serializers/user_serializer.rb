@@ -13,4 +13,6 @@ class UserSerializer < ActiveModel::Serializer
   has_many :collaboratees, through: :collaborated_users
   has_many :collaborators, through: :collaborating_users
   has_many :collab_posts
+  # has_many :collaborations, through: :collaboratees
+  # has_many :collaborations, through: :collaborators
 end
