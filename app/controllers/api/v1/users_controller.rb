@@ -1,7 +1,7 @@
 class Api::V1::UsersController < ApplicationController
   include Rails.application.routes.url_helpers
   skip_before_action :authorized, only: [:show, :create]
-  before_action :find_user, only: [:show, :update]
+  before_action :find_user, only: [:show, :update, :destroy]
 
   def profile
     render json: { user: UserSerializer.new(current_user) }, status: :accepted
@@ -32,6 +32,11 @@ class Api::V1::UsersController < ApplicationController
 
   def update
     @user.update(user_params)
+    render json: @user
+  end
+
+  def destroy
+    @user.destroy
     render json: @user
   end
 
