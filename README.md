@@ -1,24 +1,31 @@
-# README
+# ArtisTree
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A one stop shop for artists to share their media samples, work experiences, and resumes as well as to find project collaborators and daily inspiration.
 
-Things you may want to cover:
+You must create/sign into an account to be able to use this website.
 
-* Ruby version
+### Link to Backend
+https://github.com/csamelian27/artistree2-back-end
 
-* System dependencies
+## Demo Video
+https://vimeo.com/332568343
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+## Run
+**Make sure you have Postgresql running**
+1. bundle install
+2. rails db:create
+3. rails db:migrate
 
-* How to run the test suite
+## Built With
+Ruby on Rails (Backend)
 
-* Services (job queues, cache servers, search engines, etc.)
+React.js & Redux.js (Frontend)
 
-* Deployment instructions
+Semantic UI React
 
-* ...
+AWS S3
+
+### Created by
+Cassidy Samelian https://github.com/csamelian27
